@@ -1,4 +1,4 @@
-# ML Trader Bot Web Front
+# ML Trader Bot Web App
 
 This repository contains the web front-end for the ML Trader Bot project, an automated trading system that uses machine learning algorithms to make trading decisions.
 
