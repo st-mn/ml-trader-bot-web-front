@@ -11,13 +11,6 @@ const inter = Inter({ subsets: ["latin"] });
 const EXAMPLE_DATA = {
   orders: [
     {
-      symbol: "NVDA",
-      price: "235.59",
-      quantity: "213.25856385",
-      date: "2023-03-03T18:34:56.631489763Z",
-      side: "buy",
-    },
-    {
       symbol: "AAPL",
       price: "147.541928",
       quantity: "89.197865521",
@@ -31,13 +24,7 @@ const EXAMPLE_DATA = {
       date: "2023-03-02T17:47:02.447697Z",
       side: "buy",
     },
-    {
-      symbol: "TSLA",
-      price: "189.218825",
-      quantity: "264.007021354",
-      date: "2023-03-02T17:47:02.144033Z",
-      side: "sell",
-    },
+    
     {
       symbol: "TSLA",
       price: "189.171327",
@@ -45,13 +32,7 @@ const EXAMPLE_DATA = {
       date: "2023-03-02T17:46:47.543871Z",
       side: "buy",
     },
-    {
-      symbol: "AAPL",
-      price: "144.25",
-      quantity: "346.222243304",
-      date: "2023-03-02T17:45:52.504688Z",
-      side: "sell",
-    },
+  
     {
       symbol: "AAPL",
       price: "144.31",
@@ -59,13 +40,7 @@ const EXAMPLE_DATA = {
       date: "2023-03-02T17:44:20.259983Z",
       side: "buy",
     },
-    {
-      symbol: "TSLA",
-      price: "189.482407",
-      quantity: "5.267974414",
-      date: "2023-03-02T17:44:15.273436Z",
-      side: "sell",
-    },
+    
     {
       symbol: "TSLA",
       price: "189.8",
@@ -73,13 +48,7 @@ const EXAMPLE_DATA = {
       date: "2023-03-02T17:40:29.583808Z",
       side: "buy",
     },
-    {
-      symbol: "AAPL",
-      price: "144.337222",
-      quantity: "339.241276654",
-      date: "2023-03-02T17:40:30.852416Z",
-      side: "sell",
-    },
+    
     {
       symbol: "AAPL",
       price: "144.44",
@@ -87,13 +56,7 @@ const EXAMPLE_DATA = {
       date: "2023-03-02T17:37:30.356358Z",
       side: "buy",
     },
-    {
-      symbol: "AAPL",
-      price: "144.43",
-      quantity: "6.922810661",
-      date: "2023-03-02T17:37:29.544891Z",
-      side: "sell",
-    },
+    
     {
       symbol: "AAPL",
       price: "144.45",
@@ -101,13 +64,7 @@ const EXAMPLE_DATA = {
       date: "2023-03-02T17:37:12.756387Z",
       side: "buy",
     },
-    {
-      symbol: "AAPL",
-      price: "144.44",
-      quantity: "1",
-      date: "2023-03-02T17:37:12.176711Z",
-      side: "sell",
-    },
+    
     {
       symbol: "AAPL",
       price: "144.43",
