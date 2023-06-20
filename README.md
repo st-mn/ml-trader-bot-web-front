@@ -2,7 +2,7 @@
 
 This repository contains the web front-end for the ML Trader Bot project, an automated trading system that uses machine learning algorithms to make trading decisions.
 
-# Preview 
+## Preview 
 
 https://ml-trader-bot-web-front-56d2.vercel.app/ 
 
