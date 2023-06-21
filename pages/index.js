@@ -88,7 +88,7 @@ export default function Home() {
   const [data, setData] = useState(null);
 
   async function fetchJson(
-     //get the jason from the url
+     //TODO - get the jason from the url
     //url = "https://wsbdata.s3.amazonaws.com/orders.json"
     //url = "https://ml-trade-data.s3.us-east-2.amazonaws.com/data.json"
     url = "data"
@@ -144,7 +144,7 @@ export default function Home() {
           </div>
         </div> */}
         <div>
-          <h1 className="text-5xl font-normal text-black">The AI algorithmic (paper) trading machine 3000 a.k.a Script</h1>
+          <h1 className="text-5xl font-normal text-black">The AI algorithmic (paper) trader 3000 a.k.a Script</h1>
         </div>
       {/*   <div className="flex flex-col justify-center items-center">
           Powered by{" "}
@@ -169,8 +169,8 @@ export default function Home() {
                 {getProfitString()}
               </h1>
             </div>
-            <History {...data} />
-            <Orders orders={data?.orders} /> 
+            <History {...EXAMPLE_DATA} />
+            <Orders orders={EXAMPLE_DATA?.orders} /> 
             <TradingViewWidget />
           </div>
         )}
@@ -178,6 +178,12 @@ export default function Home() {
     </>
   );
 }
+
+//for no use EXAMPLE_DATA - TODD:plug above to AWS bucket to pull json data
+//<History {...data} />
+//<Orders orders={data?.orders} /> 
+//<TradingViewWidget />
+//
 
 //this function returns a list of all the orders in the data object
 function Orders({ orders }) {
