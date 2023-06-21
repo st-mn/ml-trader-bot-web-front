@@ -88,10 +88,15 @@ export default function Home() {
   const [data, setData] = useState(null);
 
   async function fetchJson(
-    url = "https://wsbdata.s3.amazonaws.com/orders.json"
+     //get the jason from the url
+    //url = "https://wsbdata.s3.amazonaws.com/orders.json"
+    //url = "https://ml-trade-data.s3.us-east-2.amazonaws.com/data.json"
+    url = "data"
+    //url = "data2"
+    //url = "https://wsbdata.s3.amazonaws.com/orders.json"
   ) {
-    //get the jason from the url
-    const res = await fetch("https://wsbdata.s3.amazonaws.com/orders.json");
+   
+    const res = await fetch(url);
     const jsonResponse = await res.json();
     setData(jsonResponse);
   }
@@ -123,9 +128,9 @@ export default function Home() {
       <main className="w-screen min-h-screen flex justify-start items-center flex-col pt-[100px] screen-content-width-two-third">
         <picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 blur-md">
           <figure className="w-screen h-[46.8vw]">
-            <Image src="/gradient_dark.jpg" alt="gradient dark" layout="fill" />
+            {/* <Image src="/gradient_dark.jpg" alt="gradient dark" layout="fill" /> */}
           </figure>
-          <div className="w-full h-screen bg-jacarta-900">asdfasdf</div>
+          <div className="w-full h-screen bg-jacarta-900">bot</div>
         </picture>
         {/* <div className="w-full flex justify-center items-center ">
           <div className={styles.thirteen}>
