@@ -31,6 +31,8 @@ The following technologies are used in this project:
 - Tailwind
 - OpenAI
 - Alpaca
+- AWS
+- Vercel
 
 ## Features
 
