@@ -55,7 +55,7 @@ export default function SimpleGraphReport({ data }) {
             enableGridX={false}
             enableSlices="x"
             colors={
-              data?.equity[data?.equity?.length - 1] < 50000
+              data?.equity[data?.equity?.length - 1] < 10000
                 ? ["#D50000"]
                 : ["#42f563"]
             }
@@ -89,7 +89,7 @@ export default function SimpleGraphReport({ data }) {
             pointColor="white"
             pointBorderWidth={2}
             pointBorderColor={
-              data?.equity[data?.equity?.length - 1] < 50000
+              data?.equity[data?.equity?.length - 1] < 10000
                 ? "#D50000"
                 : "#42f563"
             }

@@ -33,8 +33,7 @@ The following technologies are used in this project:
 This web front-end includes the following features:
 
 - **Dashboard**: Provides an overview of account balance.
-- **Trading History**: List past trades.
-- **Market Data Visualization**: Presents market data in the form of charts and graphs for better analysis.
+- **Market Data Visualization**: Presents market data in the form of charts and graphs for analysis.
 
 ## Getting Started
 

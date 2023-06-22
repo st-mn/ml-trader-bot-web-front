@@ -5,6 +5,8 @@ import styles from "@/styles/Home.module.css";
 import LineChart from "../components/LineChart";
 import TradingViewWidget from "../components/TradingViewWidget";
 import { useState, useEffect } from "react";
+import data_local from '/data/data.json' assert {type: 'json'};
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -89,11 +91,12 @@ export default function Home() {
 
   async function fetchJson(
      //TODO - get the jason from the url
-    //url = "https://wsbdata.s3.amazonaws.com/orders.json"
+    url = "https://wsbdata.s3.amazonaws.com/orders.json"
     //url = "https://ml-trade-data.s3.us-east-2.amazonaws.com/data.json"
-    url = "data"
-    //url = "data2"
+    //url = "data.json"
+    //url = "data2.json"
     //url = "https://wsbdata.s3.amazonaws.com/orders.json"
+    
   ) {
    
     const res = await fetch(url);
@@ -107,12 +110,12 @@ export default function Home() {
 
   function getProfitString() {
     const profit =
-      data.history.profit_loss_pct[data.history.profit_loss_pct.length - 1];
+    data_local.history.profit_loss_pct[data_local.history.profit_loss_pct.length - 1];
     const profitCash =
-      data.history.equity[data.history.equity.length - 1] - 50000;
+      data_local.history.equity[data_local.history.equity.length - 1] - 15000;
     return `${profitCash > 0 ? "+" : ""}$${profitCash.toFixed(2)} (${
       profit > 0 ? "+" : ""
-    }${((profitCash / 50000) * 100).toFixed(2)}%)`;
+    }${((profitCash / 15000) * 100).toFixed(2)}%)`;
   }
   return (
     <>
@@ -135,8 +138,8 @@ export default function Home() {
         {/* <div className="w-full flex justify-center items-center ">
           <div className={styles.thirteen}>
             <Image
-              src="/keystone.svg"
-              alt="keystone_logo_solid"
+              src="/tbd.svg"
+              alt="logo"
               width={40}
               height={31}
               priority
@@ -144,13 +147,13 @@ export default function Home() {
           </div>
         </div> */}
         <div>
-          <h1 className="text-5xl font-normal text-black">The AI algorithmic (paper) trader 3000 a.k.a Script</h1>
+          <h1 className="text-5xl font-normal text-black">the (slightly) artificially intelligent trader bot</h1>
         </div>
       {/*   <div className="flex flex-col justify-center items-center">
-          Powered by{" "}
+          Text{" "}
           <img
             src={
-              "https://upload.wikimedia.org/wikipedia/en/f/f0/WallStreetBets.png"
+              "https://...png"
             }
             width={"70%"}
           />
@@ -169,8 +172,10 @@ export default function Home() {
                 {getProfitString()}
               </h1>
             </div>
-            <History {...EXAMPLE_DATA} />
-            <Orders orders={EXAMPLE_DATA?.orders} /> 
+            <History {...data_local} />
+           {/*  <Orders orders={data_local?.orders} /> 
+            <History {...data} />
+            <Orders orders={data?.orders} />  */}
             <TradingViewWidget />
           </div>
         )}
@@ -179,11 +184,6 @@ export default function Home() {
   );
 }
 
-//for no use EXAMPLE_DATA - TODD:plug above to AWS bucket to pull json data
-//<History {...data} />
-//<Orders orders={data?.orders} /> 
-//<TradingViewWidget />
-//
 
 //this function returns a list of all the orders in the data object
 function Orders({ orders }) {
@@ -225,12 +225,7 @@ function Orders({ orders }) {
         {sortedOrders.map((order, index) => (
           <div className="flex flex-row" key={index}>
             <div className="flex flex-col">
-              <p className="text-black text-lg underline underline-offset-4">
-                STOCK: {order.symbol}
-              </p>
-              <p className="text-black">PRICE: ${order.price}</p>
-              <p className="text-black">QUANTITY: {order.quantity}</p>
-              <p className="text-black">{cleanDateString(order.date)}</p>
+              <p className="text-black">STOCK: {order.symbol} | PRICE: ${order.price} | QUANTITY: {order.quantity} | {cleanDateString(order.date)}</p>
             </div>
           </div>
         ))}
