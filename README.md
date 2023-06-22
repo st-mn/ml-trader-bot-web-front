@@ -23,10 +23,12 @@ Sample ML Trader Bot Web App for fun.
 
 The following technologies are used in this project:
 
+- React
 - HTML
 - CSS
 - JavaScript
 - Next.js
+- Tailwind
 
 ## Features
 
