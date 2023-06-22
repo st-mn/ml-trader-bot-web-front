@@ -88,26 +88,24 @@ const EXAMPLE_DATA = {
 
 export default function Home() {
   const [data, setData] = useState(null);
-
+  
   async function fetchJson(
-     //TODO - get the jason from the url
-    url = "https://wsbdata.s3.amazonaws.com/orders.json"
-    //url = "https://ml-trade-data.s3.us-east-2.amazonaws.com/data.json"
-    //url = "data.json"
-    //url = "data2.json"
-    //url = "https://wsbdata.s3.amazonaws.com/orders.json"
-    
+    //TODO - currently loaded from local sample data - load from AWS
+    //url = "https://ml-trade-data.s3.us-east-2.amazonaws.com/data.json"    
   ) {
    
-    const res = await fetch(url);
+    //TODO - currently loaded from local sample data - load from AWS
+    /* const res = await fetch(url);
     const jsonResponse = await res.json();
-    setData(jsonResponse);
+    setData(jsonResponse); */
+    setData(data_local);
+    
   }
 
   useEffect(() => {
     fetchJson();
   }, []);
-
+  
   function getProfitString() {
     const profit =
     data_local.history.profit_loss_pct[data_local.history.profit_loss_pct.length - 1];
