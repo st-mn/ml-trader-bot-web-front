@@ -29,6 +29,8 @@ The following technologies are used in this project:
 - JavaScript
 - Next.js
 - Tailwind
+- OpenAI
+- Alpaca
 
 ## Features
 
