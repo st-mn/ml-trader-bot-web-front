@@ -43,9 +43,7 @@ This web front-end includes the following features:
 
 ## Getting Started
 
-To get started with this project, follow these steps:
-
-1. Clone the repository:
+To get started with this project, fork or clone the repository:
 
    ```bash
    git clone https://github.com/st-mn/ml-trader-bot-web-front.git
