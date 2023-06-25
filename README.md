@@ -45,10 +45,9 @@ This web front-end includes the following features:
 
 To get started with this project, fork or clone the repository:
 
-   ```bash
+```bash
    git clone https://github.com/st-mn/ml-trader-bot-web-front.git
-
-    ```
+```
 
 ## Contributing
 
